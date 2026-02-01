@@ -1,0 +1,662 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  /* Base Official Theme with Icy Blue Accents */
+  --background: hsl(210 45% 98%);
+  --foreground: hsl(220 20% 15%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(220 20% 15%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(220 20% 15%);
+  
+  /* Base Official Blue - #0052FF */
+  --primary: hsl(221 100% 50%);
+  --primary-foreground: hsl(0 0% 100%);
+  --primary-glow: hsla(221 100% 50% / 0.18);
+  
+  /* Icy blue accents - Esdeath inspired */
+  --secondary: hsl(210 55% 96%);
+  --secondary-foreground: hsl(221 100% 50%);
+  --ice-blue: hsl(195 65% 88%);
+  --frost-overlay: hsla(195 50% 90% / 0.03);
+  
+  /* Muted - cool blue-gray */
+  --muted: hsl(210 45% 96%);
+  --muted-foreground: hsl(215 15% 50%);
+  
+  /* Accent - Base blue tint */
+  --accent: hsl(221 90% 95%);
+  --accent-foreground: hsl(221 100% 45%);
+  
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%);
+  
+  /* Borders - subtle Base blue */
+  --border: hsl(220 30% 90%);
+  --input: hsl(220 30% 90%);
+  --ring: hsl(221 100% 50%);
+  
+  /* Charts - Base blue spectrum */
+  --chart-1: hsl(221 100% 50%);
+  --chart-2: hsl(221 90% 55%);
+  --chart-3: hsl(221 85% 60%);
+  --chart-4: hsl(210 80% 55%);
+  --chart-5: hsl(200 75% 60%);
+  
+  --radius: 1rem;
+  
+  /* Base-native gradients with icy frost hints */
+  --base-gradient-1: linear-gradient(135deg, hsl(221 100% 96%) 0%, hsl(210 70% 98%) 100%);
+  --base-gradient-2: linear-gradient(135deg, hsl(221 100% 50%) 0%, hsl(221 95% 55%) 100%);
+  --base-sky: linear-gradient(180deg, hsl(210 50% 97%) 0%, hsl(200 40% 98%) 50%, hsl(0 0% 100%) 100%);
+  --frost-glow: radial-gradient(circle at center, hsla(195 70% 85% / 0.08) 0%, transparent 70%);
+}
+
+.dark {
+  /* Dark mode - midnight Base blue with frost accents */
+  --background: hsl(220 35% 8%);
+  --foreground: hsl(210 40% 95%);
+  --card: hsl(220 30% 12%);
+  --card-foreground: hsl(210 40% 95%);
+  --popover: hsl(220 30% 12%);
+  --popover-foreground: hsl(210 40% 95%);
+  
+  /* Base Official Blue - glowing in dark */
+  --primary: hsl(221 100% 60%);
+  --primary-foreground: hsl(220 35% 8%);
+  --primary-glow: hsla(221 100% 60% / 0.25);
+  
+  /* Icy frost - darker mode */
+  --secondary: hsl(220 30% 18%);
+  --secondary-foreground: hsl(221 100% 65%);
+  --ice-blue: hsl(195 60% 40%);
+  --frost-overlay: hsla(195 50% 70% / 0.04);
+  
+  /* Muted - soft gray-blue */
+  --muted: hsl(220 25% 20%);
+  --muted-foreground: hsl(215 15% 65%);
+  
+  /* Accent - bright icy blue */
+  --accent: hsl(200 80% 25%);
+  --accent-foreground: hsl(200 90% 88%);
+  
+  --destructive: hsl(0 62.8% 50%);
+  --destructive-foreground: hsl(0 0% 98%);
+  
+  /* Borders - subtle blue glow */
+  --border: hsl(220 25% 22%);
+  --input: hsl(220 25% 22%);
+  --ring: hsl(221 100% 60%);
+  
+  /* Charts - glowing Base blue spectrum */
+  --chart-1: hsl(221 100% 60%);
+  --chart-2: hsl(221 95% 65%);
+  --chart-3: hsl(221 90% 70%);
+  --chart-4: hsl(210 85% 60%);
+  --chart-5: hsl(200 80% 65%);
+  
+  /* Dark gradients with frost */
+  --base-gradient-1: linear-gradient(135deg, hsl(220 30% 10%) 0%, hsl(221 35% 15%) 100%);
+  --base-gradient-2: linear-gradient(135deg, hsl(221 100% 60%) 0%, hsl(221 95% 65%) 100%);
+  --base-sky: linear-gradient(180deg, hsl(220 40% 12%) 0%, hsl(220 35% 8%) 50%, hsl(220 30% 10%) 100%);
+  --frost-glow: radial-gradient(circle at center, hsla(195 70% 60% / 0.06) 0%, transparent 70%);
+}
+
+/* ========================================
+   SEASONAL THEMES - SUBTLE OVERLAYS ONLY
+   Base Official Blue remains untouched
+   ======================================== */
+
+/* WINTER THEME - Cooler blue tones, enhanced frost */
+.winter {
+  /* Slightly cooler background tones */
+  --background: hsl(210 50% 97%);
+  --card: hsl(210 60% 99%);
+  
+  /* Enhanced icy accents */
+  --ice-blue: hsl(195 70% 85%);
+  --frost-overlay: hsla(195 60% 88% / 0.05);
+  
+  /* Cooler secondary tones */
+  --secondary: hsl(205 60% 94%);
+  --muted: hsl(210 50% 95%);
+  
+  /* Cooler borders with icy hint */
+  --border: hsl(210 40% 88%);
+  --input: hsl(210 40% 88%);
+  
+  /* Winter gradients - cooler sky */
+  --base-sky: linear-gradient(180deg, hsl(205 55% 96%) 0%, hsl(195 45% 97%) 50%, hsl(0 0% 100%) 100%);
+  --frost-glow: radial-gradient(circle at center, hsla(195 75% 82% / 0.12) 0%, transparent 70%);
+}
+
+.dark.winter {
+  /* Cooler dark background */
+  --background: hsl(215 40% 7%);
+  --card: hsl(215 35% 11%);
+  
+  /* Enhanced icy glow in dark */
+  --ice-blue: hsl(195 65% 45%);
+  --frost-overlay: hsla(195 55% 75% / 0.06);
+  
+  /* Cooler dark accents */
+  --secondary: hsl(215 35% 17%);
+  --muted: hsl(215 30% 19%);
+  
+  /* Icy borders */
+  --border: hsl(215 30% 20%);
+  --input: hsl(215 30% 20%);
+  
+  /* Winter dark gradients */
+  --base-sky: linear-gradient(180deg, hsl(215 45% 10%) 0%, hsl(215 40% 7%) 50%, hsl(215 35% 9%) 100%);
+  --frost-glow: radial-gradient(circle at center, hsla(195 75% 55% / 0.09) 0%, transparent 70%);
+}
+
+/* SPRING THEME - Lighter whites, soft warm highlights */
+.spring {
+  /* Brighter, airier background */
+  --background: hsl(210 40% 99%);
+  --card: hsl(0 0% 100%);
+  
+  /* Softer, warmer accents */
+  --ice-blue: hsl(200 60% 92%);
+  --frost-overlay: hsla(210 40% 95% / 0.02);
+  
+  /* Lighter secondary tones */
+  --secondary: hsl(210 50% 97%);
+  --muted: hsl(210 40% 97%);
+  
+  /* Lighter borders */
+  --border: hsl(215 25% 92%);
+  --input: hsl(215 25% 92%);
+  
+  /* Spring gradients - warm sky */
+  --base-sky: linear-gradient(180deg, hsl(210 45% 98%) 0%, hsl(210 35% 99%) 50%, hsl(0 0% 100%) 100%);
+  --frost-glow: radial-gradient(circle at center, hsla(210 55% 90% / 0.06) 0%, transparent 70%);
+}
+
+.dark.spring {
+  /* Slightly warmer dark background */
+  --background: hsl(220 30% 9%);
+  --card: hsl(220 25% 13%);
+  
+  /* Warmer dark accents */
+  --ice-blue: hsl(200 55% 42%);
+  --frost-overlay: hsla(210 45% 72% / 0.03);
+  
+  /* Warmer dark secondary */
+  --secondary: hsl(220 25% 19%);
+  --muted: hsl(220 20% 21%);
+  
+  /* Softer borders */
+  --border: hsl(220 20% 24%);
+  --input: hsl(220 20% 24%);
+  
+  /* Spring dark gradients */
+  --base-sky: linear-gradient(180deg, hsl(220 35% 13%) 0%, hsl(220 30% 9%) 50%, hsl(220 25% 11%) 100%);
+  --frost-glow: radial-gradient(circle at center, hsla(210 65% 62% / 0.05) 0%, transparent 70%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar-background: var(--sidebar-background);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+/* Accordion animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* Anime-inspired animations - sharp, decisive, intentional */
+
+/* Receipt card entrance - quick fade + subtle scale */
+@keyframes receipt-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Sharp fade-in - no Y movement, pure opacity */
+@keyframes fade-in-sharp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Quick slide - precise and controlled */
+@keyframes slide-in-precise {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mint success - brief scale with sharp timing */
+@keyframes mint-success {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Frost pulse - subtle, controlled glow */
+@keyframes frost-pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Checkmark draw - clean and sharp */
+@keyframes checkmark-draw {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Success badge entrance - sharp scale */
+@keyframes badge-entrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Glow expand - controlled and brief */
+@keyframes glow-expand-controlled {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+}
+
+/* Ring pulse - sharp and precise */
+@keyframes ring-pulse-sharp {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--primary-glow);
+  }
+  50% {
+    box-shadow: 0 0 0 6px var(--primary-glow);
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+/* Base-inspired background with frost overlay */
+.base-bg {
+  position: relative;
+  background: var(--base-sky);
+}
+
+.base-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--frost-glow);
+  background-position: 30% 20%;
+  background-size: 800px 800px;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.base-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, var(--frost-overlay) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, var(--frost-overlay) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Card glow - Base official blue */
+.card-glow {
+  box-shadow: 0 8px 32px var(--primary-glow);
+}
+
+.dark .card-glow {
+  box-shadow: 0 8px 32px var(--primary-glow), 0 0 1px hsl(221 100% 60%);
+}
+
+/* Button glow - sharp transition */
+.button-glow {
+  box-shadow: 0 4px 16px var(--primary-glow);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-glow:hover {
+  box-shadow: 0 8px 24px var(--primary-glow);
+  transform: translateY(-2px);
+}
+
+/* Animation classes - sharp and controlled */
+.animate-receipt-appear {
+  animation: receipt-appear 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in-sharp 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in-precise 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-mint-success {
+  animation: mint-success 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-frost-pulse {
+  animation: frost-pulse 2.5s ease-in-out infinite;
+}
+
+.animate-checkmark-draw {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: checkmark-draw 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+}
+
+.animate-badge-entrance {
+  animation: badge-entrance 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-glow-expand {
+  animation: glow-expand-controlled 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-ring-pulse {
+  animation: ring-pulse-sharp 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Stagger delays for sequential animations */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+.stagger-6 { animation-delay: 0.3s; }
+
+/* Anime-inspired float animation - subtle and calm */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* Glassmorphism - Base Official Theme */
+
+/* Primary glass panel - for main content areas */
+.glass-panel {
+  backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(221, 100, 50, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 82, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.dark .glass-panel {
+  backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(20, 24, 40, 0.75);
+  border: 1px solid rgba(221, 100, 60, 0.25);
+  box-shadow: 
+    0 8px 32px rgba(0, 82, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Secondary glass panel - for nested content */
+.glass-panel-secondary {
+  backdrop-filter: blur(8px) saturate(160%);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(221, 100, 50, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 82, 255, 0.06);
+}
+
+.dark .glass-panel-secondary {
+  backdrop-filter: blur(10px) saturate(160%);
+  background: rgba(20, 24, 40, 0.6);
+  border: 1px solid rgba(221, 100, 60, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 82, 255, 0.12);
+}
+
+/* Glass card - for receipt cards with extra depth */
+.glass-card {
+  backdrop-filter: blur(16px) saturate(200%);
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(221, 100, 50, 0.25);
+  box-shadow: 
+    0 12px 48px rgba(0, 82, 255, 0.12),
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -2px 0 rgba(0, 82, 255, 0.05);
+}
+
+.dark .glass-card {
+  backdrop-filter: blur(20px) saturate(200%);
+  background: rgba(20, 24, 40, 0.85);
+  border: 2px solid rgba(221, 100, 60, 0.3);
+  box-shadow: 
+    0 12px 48px rgba(0, 82, 255, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -2px 0 rgba(0, 82, 255, 0.15);
+}
+
+/* Glass header - for top navigation */
+.glass-header {
+  backdrop-filter: blur(10px) saturate(180%);
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(221, 100, 50, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 82, 255, 0.06);
+}
+
+.dark .glass-header {
+  backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(20, 24, 40, 0.7);
+  border-bottom: 1px solid rgba(221, 100, 60, 0.25);
+  box-shadow: 0 4px 24px rgba(0, 82, 255, 0.12);
+}
+
+/* Frosted background layers */
+.frosted-layer-1 {
+  background: radial-gradient(
+    circle at 30% 20%,
+    hsla(221, 100%, 50%, 0.06) 0%,
+    transparent 50%
+  );
+}
+
+.frosted-layer-2 {
+  background: radial-gradient(
+    circle at 70% 80%,
+    hsla(195, 65%, 88%, 0.04) 0%,
+    transparent 50%
+  );
+}
+
+.dark .frosted-layer-1 {
+  background: radial-gradient(
+    circle at 30% 20%,
+    hsla(221, 100%, 60%, 0.08) 0%,
+    transparent 50%
+  );
+}
+
+.dark .frosted-layer-2 {
+  background: radial-gradient(
+    circle at 70% 80%,
+    hsla(195, 60%, 40%, 0.06) 0%,
+    transparent 50%
+  );
+}
+
+/* Glass button hover effect */
+.glass-button {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 82, 255, 0.85);
+  border: 1px solid rgba(221, 100, 50, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-button:hover {
+  backdrop-filter: blur(12px);
+  background: rgba(0, 82, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 32px rgba(0, 82, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-button {
+  background: rgba(0, 82, 255, 0.9);
+}
+
+.dark .glass-button:hover {
+  background: rgba(0, 82, 255, 1);
+  box-shadow: 
+    0 8px 32px rgba(0, 82, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-receipt-appear,
+  .animate-fade-in,
+  .animate-slide-in,
+  .animate-mint-success,
+  .animate-frost-pulse,
+  .animate-checkmark-draw,
+  .animate-badge-entrance,
+  .animate-glow-expand,
+  .animate-ring-pulse {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  .animate-checkmark-draw {
+    stroke-dashoffset: 0;
+  }
+  
+  .button-glow:hover {
+    transform: none;
+  }
+  
+  /* Disable backdrop-filter for reduced motion */
+  .glass-panel,
+  .glass-panel-secondary,
+  .glass-card,
+  .glass-header,
+  .glass-button {
+    backdrop-filter: none;
+  }
+}

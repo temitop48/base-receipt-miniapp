@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjU3MzIxMSwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDg2NWUwQmExYzJjNDhiZDQ4ZkRFREZhMEMxNmFmMWREYkY0YzFBMEMifQ",
+    "payload": "eyJkb21haW4iOiJyZXR1cm4tdm9pY2UtNTMwLmFwcC5vaGFyYS5haSJ9",
+    "signature": "nuE5W4fksKru1JEXgZdUPoreRWHFBBo+7oyTyhCPxe4PfaNhWo9mlYbimgxR0e5fkg6F0Uce88Lk97DXmkKvZhs="
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "Base Receipts: Web3 Memories",
+    "iconUrl": "https://usdozf7pplhxfvrl.public.blob.vercel-storage.com/thumbnail_8935ab37-2ba6-4040-ab53-4f4d2983f308-XFe3OQ0LMWpmCFo088F5Ai0GVdmhpe",
+    "homeUrl": "https://return-voice-530.app.ohara.ai",
+    "imageUrl": "https://usdozf7pplhxfvrl.public.blob.vercel-storage.com/thumbnail_8935ab37-2ba6-4040-ab53-4f4d2983f308-XFe3OQ0LMWpmCFo088F5Ai0GVdmhpe",
+    "buttonTitle": "Open with Ohara",
+    "splashImageUrl": "https://usdozf7pplhxfvrl.public.blob.vercel-storage.com/farcaster/splash_images/splash_image1.svg",
+    "splashBackgroundColor": "#ffffff",
+    "tags": [
+      "ohara",
+      "mini-app",
+      "base",
+      "farcaster"
+    ],
+    "primaryCategory": "entertainment",
+    "ogTitle": "Base Receipts: Web3 Memories",
+    "ogImageUrl": "https://usdozf7pplhxfvrl.public.blob.vercel-storage.com/thumbnail_8935ab37-2ba6-4040-ab53-4f4d2983f308-XFe3OQ0LMWpmCFo088F5Ai0GVdmhpe",
+    "screenshotUrls": []
+  },
+  "baseBuilder": {
+    "ownerAddress": ""
+  }
+}
