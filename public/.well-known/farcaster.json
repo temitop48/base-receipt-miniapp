@@ -9,7 +9,7 @@
     "name": "Base Receipt Mini App",
     "iconUrl": "https://base-receipt.vercel.app/favicon.ico", 
     "homeUrl": "https://base-receipt.vercel.app/",
-    "imageUrl": "https://YOUR_VERCEL_URL/og.png",
+    "imageUrl": "https://base-receipt.vercel.app/og.png",
     "buttonTitle": "Open App"
   }
 }
